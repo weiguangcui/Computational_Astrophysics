@@ -4,8 +4,8 @@ title: Computational Astrophysics
 repository: weiguangcui/Computational_Astrophysics
 
 course_name: Computational Astrophysics Course
-course_description: "This MSc course aims at providing an introduction to high-performance computing using astrophysical phenonema as examples. The course is a mixture between actual class room lectures and hands-on coding exercises. It therefore is not only targetting the students from the astrophysics speciality of our MSc in Theoretical Physics, but rather of interest to all students."
-course_semester: "Spring 2025"
+course_description: "This MSc course aims at providing an introduction to high-performance computing using astrophysical phenomena as examples. The course is a mixture between actual class room lectures and hands-on coding exercises. It therefore is not only targeting the students from the astrophysics speciality of our MSc in Theoretical Physics, but rather of interest to all students."
+course_semester: "Spring 2026"
 
 baseurl: "/Computational_Astrophysics/" # the subpath of your site, e.g. /blog/
 url: "https://weiguangcui.github.io/" # the base hostname & protocol for your site
