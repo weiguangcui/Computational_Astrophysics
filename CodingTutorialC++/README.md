@@ -4,6 +4,10 @@ This project is written in C++ and includes the following files:
 
 ## Source Files
 
+### [`HelloWorld.cpp`](./HelloWorld.cpp)
+
+This file contains a program that prints "Hello World" to the console and then crashes with a segmentation fault. It also demonstrates the difference between buffered (std::cout, similar to printf in C) and unbuffered (std::cerr, similar to fprintf(stderr, ...)) output.
+
 ### [`overflow.cpp`](./overflow.cpp)
 
 This file contains a program that demonstrates integer and floating point overflow and underflow. It also demonstrates the precision error that can occur with floating point numbers.

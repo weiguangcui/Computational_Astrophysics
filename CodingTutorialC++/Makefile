@@ -17,19 +17,19 @@ CXXFLAGS = -std=c++11 -Wall -fopenmp $(DEFINEFLAGS)
 TARGET = ACO_practice
 
 # Source files: SRCS is a list of source files
-SRCS = overflow.cpp MainArgs.cpp openmp-example.cpp pi.cpp pointer-dam.cpp pointer-dam3D.cpp \
+SRCS = HelloWorld.cpp overflow.cpp MainArgs.cpp openmp-example.cpp pi.cpp pointer-dam.cpp pointer-dam3D.cpp \
 		pointer-update-parameter.cpp IO.cpp class.cpp structure.cpp Sort_index.cpp vector.cpp \
-		different_arrays.cpp openmp-nested-for-loop.cpp openp-no-parallel.cpp openmp-parallle-output.cpp \
-		openmp-sections.cpp problemtic_program_for_gdb.cpp advanced_functions.cpp
+		different_arrays.cpp openmp-nested-for-loop.cpp openmp-no-parallel.cpp openmp-parallel-output.cpp \
+		openmp-sections.cpp problematic_program_for_gdb.cpp advanced_functions.cpp
 
 # Object files
 # The $(SRCS:.cpp=.o) is a substitution reference which replaces the .cpp extension with .o in SRCS
 OBJS = $(SRCS:.cpp=.o)
 
 # Executables
-EXECS = overflow MainArgs openmp-example pi pointer-dam pointer-dam3D IO pointer-update-parameter \
+EXECS = HelloWorld overflow MainArgs openmp-example pi pointer-dam pointer-dam3D IO pointer-update-parameter \
  		class structure Sort_index vector different_arrays openmp-nested-for-loop openmp-no-parallel \
- 		openmp-parallle-output openmp-sections problemtic_program_for_gdb advanced_functions
+ 		openmp-parallel-output openmp-sections problematic_program_for_gdb advanced_functions
 
 # Number of threads for OpenMP
 # OMP_NUM_THREADS is an environment variable that specifies the number of threads to use for OpenMP
@@ -45,6 +45,9 @@ all: $(EXECS)
 # Each target has a rule that specifies how to build it
 # The $(CXX) $(CXXFLAGS) -o $@ $< command compiles the source file into an executable
 # $@ is the name of the target and $< is the name of the first prerequisite
+HelloWorld: HelloWorld.o
+	$(CXX) $(CXXFLAGS) -o HelloWorld HelloWorld.o
+
 overflow: overflow.o
 	$(CXX) $(CXXFLAGS) -o overflow overflow.o
 
@@ -90,14 +93,14 @@ openmp-nested-for-loop: openmp-nested-for-loop.o
 openmp-no-parallel: openmp-no-parallel.o
 	$(CXX) $(CXXFLAGS) -o openmp-no-parallel openmp-no-parallel.o
 
-openmp-parallle-output: openmp-parallle-output.o
-	$(CXX) $(CXXFLAGS) -o openmp-parallle-output openmp-parallle-output.o
+openmp-parallel-output: openmp-parallel-output.o
+	$(CXX) $(CXXFLAGS) -o openmp-parallel-output openmp-parallel-output.o
 
 openmp-sections: openmp-sections.o
 	$(CXX) $(CXXFLAGS) -o openmp-sections openmp-sections.o
 
-problemtic_program_for_gdb: problemtic_program_for_gdb.o
-	$(CXX) $(CXXFLAGS) -o problemtic_program_for_gdb problemtic_program_for_gdb.o
+problematic_program_for_gdb: problematic_program_for_gdb.o
+	$(CXX) $(CXXFLAGS) -o problematic_program_for_gdb problematic_program_for_gdb.o
 
 segfault_examples: segfault_examples.o
 	$(CXX) $(CXXFLAGS) -o segfault_examples segfault_examples.o

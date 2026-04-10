@@ -8,6 +8,8 @@ permalink: /materials/
 
 # Programming Guides (by Steffen Knollmann):
 
+* [C++ Annotations](https://fbb-git.gitlab.io/cppannotations/cppannotations/html/index.html),Frank B. Brokken
+
 * [C tutorial](http://popia.ft.uam.es/ACO/files/C-tutorial.pdf)
 
 * [parallel programming guide](http://popia.ft.uam.es/ACO/files/ParallelProgramming.pdf)

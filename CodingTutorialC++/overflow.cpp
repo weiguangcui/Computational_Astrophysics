@@ -55,5 +55,20 @@ int main(int argc, char **argv) {
     g = f + 16777216.0;
     cout << setprecision(10) << f << "+16777216 =" << g << endl;
 
+
+    
+
+    //--------------------------------------------------------------------------------------------
+    // Buffer Overflow: Occurs when a program writes more data to a buffer (a temporary storage
+    // area, like an array) than it was intended to hold, causing data to spill into adjacent
+    // memory areas.
+    //--------------------------------------------------------------------------------------------
+    int buffer[5];
+    cout << "\nBuffer Overflow Example:" << endl;
+    for (int i = 0; i <= 5; ++i) { // Loop runs 6 times, writing out of bounds on the last iteration
+        buffer[i] = i * 10;
+        cout << "buffer[" << i << "] = " << buffer[i] << endl;
+    }
+
     return 0;
 }
