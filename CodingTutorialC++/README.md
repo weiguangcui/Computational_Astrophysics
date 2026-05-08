@@ -1,50 +1,19 @@
-# ACO_practice
+<!-- # ACO_practice -->
 
 This project is written in C++ and includes the following files:
 
-## Source Files
+# Source Files
+
+---
+## Basic/Advanced C++ 
 
 ### [`HelloWorld.cpp`](./HelloWorld.cpp)
 
 This file contains a program that prints "Hello World" to the console and then crashes with a segmentation fault. It also demonstrates the difference between buffered (std::cout, similar to printf in C) and unbuffered (std::cerr, similar to fprintf(stderr, ...)) output.
 
-### [`overflow.cpp`](./overflow.cpp)
-
-This file contains a program that demonstrates integer and floating point overflow and underflow. It also demonstrates the precision error that can occur with floating point numbers.
-
 ### [`MainArgs.cpp`](./MainArgs.cpp)
 
 This file contains a program that prints the name of the program and all the arguments passed to it.
-
-### [`openmp-example.cpp`](./openmp-example.cpp)
-
-This file contains a program that uses OpenMP to calculate the sum of numbers from 1 to 1e5. It sets the number of threads to the number of processors available, and each thread calculates a portion of the sum.
-
-### [`openmp-nested-for-loop.cpp`](./openmp-nested-for-loop.cpp)
-
-This file contains a program that demonstrates the use of nested for loops in OpenMP. It shows how to parallelize both outer and inner loops for efficient computation.
-
-### [`openmp-no-parallel.cpp`](./openmp-no-parallel.cpp)
-
-This file contains a program that demonstrates the cases that OpenMP parallelization can not be used. It shows how a program behaves when run on a single thread.
-
-### [`openmp-parallel-output.cpp`](./openmp-parallel-output.cpp)
-
-This file contains a program that demonstrates the use of OpenMP for parallel output. It shows how to write to different files in parallel using OpenMP.
-
-### [`openmp-sections.cpp`](./openmp-sections.cpp)
-
-This file contains a program that demonstrates the use of sections in OpenMP. It shows how to divide a program into sections that can be executed in parallel.
-
-### [`problemtic_program_for_gdb.cpp`](./problemtic_program_for_gdb.cpp)
-
-This file contains a program that is designed to be debugged using GDB. It includes intentional errors that can be investigated using the debugger.
-
-
-### [`pi.cpp`](./pi.cpp)
-
-This file contains a program that calculates the value of pi using the Leibniz formula for π. The program uses OpenMP for parallel computation, allowing it to calculate pi to a high degree of precision in a shorter amount of time. The number of threads used for the computation can be specified as a command-line argument when running the program.
-To build and run `pi.cpp`, use the make command followed by the name of the file (without the .cpp extension), and then run the resulting executable with the number of threads as an argument:
 
 ### [`pointer-dam.cpp`](./pointer-dam.cpp)
 
@@ -78,29 +47,76 @@ This file contains a program that demonstrates the use of different types of arr
 
 This file contains a program that demonstrates the use of std::vector in C++. It includes examples of creating vectors, adding elements to vectors, accessing vector elements, and different vector built-in functions.
 
-### [`Sort_index.cpp`](./Sort_index.cpp)
+### [`advanced_functions.cpp`](./advanced_functions.cpp)
 
-This file contains a program that demonstrates how to sort an array and get the index of the sorted array in C++. It includes examples of using std::sort and std::vector.
+This file contains a program that demonstrates the use of advanced functions in C++. It includes examples of function templates, lambda functions, function objects, function pointers, function overloading, default arguments.
 
+
+---
+## OpenMP
+### [`openmp-example.cpp`](./openmp-example.cpp)
+
+This file contains a program that uses OpenMP to calculate the sum of numbers from 1 to 1e5. It sets the number of threads to the number of processors available, and each thread calculates a portion of the sum.
+
+### [`openmp-nested-for-loop.cpp`](./openmp-nested-for-loop.cpp)
+
+This file contains a program that demonstrates the use of nested for loops in OpenMP. It shows how to parallelize both outer and inner loops for efficient computation.
+
+### [`openmp-no-parallel.cpp`](./openmp-no-parallel.cpp)
+
+This file contains a program that demonstrates the cases that OpenMP parallelization can not be used. It shows how a program behaves when run on a single thread.
+
+### [`openmp-parallel-output.cpp`](./openmp-parallel-output.cpp)
+
+This file contains a program that demonstrates the use of OpenMP for parallel output. It shows how to write to different files in parallel using OpenMP.
+
+### [`openmp-sections.cpp`](./openmp-sections.cpp)
+
+This file contains a program that demonstrates the use of sections in OpenMP. It shows how to divide a program into sections that can be executed in parallel.
+
+---
+## MPI
 ### [`mpi_example.cpp`](./mpi_example.cpp)
 
 The mpi_example.cpp file is a C++ program that demonstrates the use of the Message Passing Interface (MPI) for parallel computing. The program calculates the sum of an array of numbers, distributing the task across multiple processes.
 
 To compile and run this program, an MPI implementation (like Open MPI or MPICH) needs to be installed on the system. The compilation command might look like `mpic++ mpi_example.cpp -o mpi_example`, and the run command might look like `mpirun -np 4 ./mpi_example`, where `-np 4` specifies to run the program with 4 processes.
 
-### [`advanced_functions.cpp`](./advanced_functions.cpp)
 
-This file contains a program that demonstrates the use of advanced functions in C++. It includes examples of function templates, lambda functions, function objects, function pointers, function overloading, default arguments.
+---
+## Debugger and Common problems
+
+### [`problemtic_program_for_gdb.cpp`](./problemtic_program_for_gdb.cpp)
+
+This file contains a program that is designed to be debugged using GDB. It includes intentional errors that can be investigated using the debugger.
+
+### [`overflow.cpp`](./overflow.cpp)
+
+This file contains a program that demonstrates integer and floating point overflow and underflow. It also demonstrates the precision error that can occur with floating point numbers.
+
+### [`segfault_examples.cpp`](./segfault_examples.cpp)
+
+This file contains a program that demonstrates the use of segfault examples in C++. It includes examples of segfaults and how to handle them.
+
+
+---
+## Useful libraries and functions
+
+### [`Sort_index.cpp`](./Sort_index.cpp)
+
+This file contains a program that demonstrates how to sort an array and get the index of the sorted array in C++. It includes examples of using std::sort and std::vector.
+
+### [`pi.cpp`](./pi.cpp)
+
+This file contains a program that calculates the value of pi using the Leibniz formula for π. The program uses OpenMP for parallel computation, allowing it to calculate pi to a high degree of precision in a shorter amount of time. The number of threads used for the computation can be specified as a command-line argument when running the program.
+To build and run `pi.cpp`, use the make command followed by the name of the file (without the .cpp extension), and then run the resulting executable with the number of threads as an argument:
 
 ```bash
 make pi
 ./pi 4 This will build `pi.cpp` and run the resulting `pi` executable with 4 threads.
 ```
 
-### [`segfault_examples.cpp`](./segfault_examples.cpp)
-
-This file contains a program that demonstrates the use of segfault examples in C++. It includes examples of segfaults and how to handle them.
-
+---
 ## Build Files
 
 ### [`Makefile`](./Makefile)
